@@ -4,6 +4,10 @@ This repository contains packaging scripts and C library patches to easily insta
 
 Using the installed tools, you can easily build C and Z80 asm programs for the Z80 directly on the cartridge, then launch those Z80 programs on your C128 from the idun Dos shell with the `zload` command.
 
+[![Demo video]
+(https://img.youtube.com/vi/vt5fpE0bzSY/maxresdefault.jpg)]
+(https://youtu.be/vt5fpE0bzSY)
+
 How to Use
 ----------
 The main tool for using the Z80 compiler/assembler is `zcc`. This runs on the Raspberry Pi in the idun-cart and cross-compiles Z80 code for the C128. In most cases, you just need a command line like this to build your program:
