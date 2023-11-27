@@ -5,8 +5,9 @@ This repository contains packaging scripts and C library patches to easily insta
 Using the installed tools, you can easily build C and Z80 asm programs for the Z80 directly on the cartridge, then launch those Z80 programs on your C128 from the idun Dos shell with the `zload` command.
 
 [![Demo video]
-(https://img.youtube.com/vi/vt5fpE0bzSY/maxresdefault.jpg)]
-(https://youtu.be/vt5fpE0bzSY)
+(https://img.youtube.com/vi/EeYdJ8bXxik/maxresdefault.jpg)]
+(https://youtu.be/EeYdJ8bXxik?feature=shared)
+
 
 How to Use
 ----------
