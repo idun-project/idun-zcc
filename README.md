@@ -19,7 +19,7 @@ Any number or mix of both C and asm files is supported, and the .c files also su
 
 How to Install
 --------------
-Grab the latest SD card image for the idun-cart, which includes this package by default. Or, download the release from this repository using `wget` and install it on your cart using `sudo pacman -U idun-zcc-*`. You'll also need to update the main idun package (adds `zload`) and the content from the `idun-base` repository to get the sample code files.
+Install it on your cart using `sudo pacman -Sy idun-zcc`.
 
 What's Included
 ---------------
