@@ -7,7 +7,7 @@ arch="aarch64"
 url="http://github.com/idun-project/idun-zcc"
 license="ClArtistic"
 depends="libxml2"
-makedepends="gmp-dev gmp-static libxml2-dev libxml2-static perl-dev"
+makedepends="gmp-dev gmp-static libxml2-dev libxml2-static perl-app-cpanminus perl-dev"
 source="z88dk-src-${pkgver}.tgz"
 options="!check"
 install="$pkgname.post-install $pkgname.pre-deinstall"
@@ -33,15 +33,16 @@ build() {
 
 package() {
   cd "${srcdir}/z88dk"
-  make -C libsrc prefix="/usr" DESTDIR="${pkgdir}/usr" install
-  make prefix="/usr" DESTDIR="${pkgdir}/usr" install
+  make -C libsrc PREFIX="/usr" DESTDIR="${pkgdir}" install
+  make PREFIX="/usr" DESTDIR="${pkgdir}" install
 
   # Uncomment for a cleaner install directory - no functionality will be lost
   rm -rf ${pkgdir}/usr/share/z88dk/libsrc/target/{zx,zxn,ts2068}/newlib/obj
   rm -rf ${pkgdir}/usr/share/z88dk/libsrc/target/zx-common/fcntl/esxdos/obj
   rm -rf ${pkgdir}/usr/share/z88dk/libsrc/target/zx/fzx/obj/{z80,z80n}
 
-  install -m644 ${srcdir}/z88dk.sh ${pkgdir}/etc/profile.d/
+  install -dm755 ${pkgdir}/etc/profile.d/
+  install -m644 ${srcdir}/z88dk/z88dk.sh ${pkgdir}/etc/profile.d/
   # Include docs
   install -dm755 ${pkgdir}/usr/share/doc/z88dk
   install -dm755 ${pkgdir}/usr/share/doc/z88dk/images
