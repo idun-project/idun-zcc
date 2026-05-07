@@ -1,0 +1,6 @@
+#!/bin/bash
+
+wget https://github.com/z88dk/z88dk/releases/download/v2.3/z88dk-src-2.3.tgz
+tar cfz c128_libs_includes.tgz include/ libsrc/ lib/
+abuild checksums
+abuild -r
