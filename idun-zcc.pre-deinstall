@@ -1,5 +1,0 @@
-#!/bin/sh
-
-if ! [ -d "/home/idun/.profile" ]; then
-  sed -i '/z88dk/d' /home/idun/.profile
-fi

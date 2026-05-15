@@ -1,4 +1,0 @@
-#!/bin/sh
-if ! [ -d "/home/idun/.profile" ]; then
-  echo ". \"/etc/profile.d/z88dk.sh\"" >> /home/idun/.profile
-fi

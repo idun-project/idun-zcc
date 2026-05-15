@@ -10,7 +10,6 @@ depends="libxml2"
 makedepends="gmp-dev gmp-static libxml2-dev libxml2-static perl-app-cpanminus perl-dev"
 source="z88dk-src-${pkgver}.tgz"
 options="!check"
-install="$pkgname.post-install $pkgname.pre-deinstall"
 
 prepare() {
   cp build.sh "${srcdir}/z88dk/"
